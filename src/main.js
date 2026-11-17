@@ -3,7 +3,7 @@ import * as THREE from "three";
 
 const I18N = {
   ru: {
-    brand: "Дмитрий Долганин",
+    brand: "Дмитрий контур",
     menu: "Меню",
     close: "Закрыть",
     navProjects: "Проекты",
@@ -72,7 +72,7 @@ const I18N = {
       "Описание проекта — пара абзацев о задаче, идее и результате. Замените этот текст на свой (файл src/main.js, блок PROJECTS).",
   },
   en: {
-    brand: "Dmitrii Dolganin",
+    brand: "Dmitrii circuit",
     menu: "Menu",
     close: "Close",
     navProjects: "Projects",
@@ -141,7 +141,7 @@ const I18N = {
       "Project description — a couple of paragraphs about the brief, the idea and the outcome. Replace this text with your own (src/main.js, PROJECTS block).",
   },
   zh: {
-    brand: "德米特里·多尔加宁",
+    brand: "德米特里·电路",
     menu: "菜单",
     close: "关闭",
     navProjects: "项目",
