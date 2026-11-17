@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дмитрий Долганин — 3D-художник</title>
+<meta name="description" content="Портфолио Дмитрия Долганина — 3D-художника: hard surface, автомобили, архитектурная визуализация, стилизованные сцены.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:"PP Neue Montreal Mono";
+  src:url("./fonts/PPNeueMontrealMono-Thin.otf") format("opentype");
+  font-weight:300; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"PP Neue Montreal Mono";
+  src:url("./fonts/PPNeueMontrealMono-Book.otf") format("opentype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"PP Neue Montreal Mono";
+  src:url("./fonts/PPNeueMontrealMono-Medium.otf") format("opentype");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+</style>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- ===== Mobile top bar (hidden on desktop) ===== -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="topbar-brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий Долганин</button>
+    <div class="lang-switch" aria-label="Language">
+      <button type="button" class="active" data-lang="ru">ru</button>
+      <button type="button" data-lang="en">en</button>
+      <button type="button" data-lang="zh">中文</button>
+    </div>
+  </div>
+  <button class="topbar-menu-btn" type="button" data-menu-open aria-haspopup="dialog" data-i18n="menu">Меню</button>
+</header>
+
+<!-- ===== Mobile full-screen menu ===== -->
+<div class="menu-overlay" data-menu-overlay hidden>
+  <div class="menu-overlay-inner" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="menu-overlay-head">
+      <span data-i18n="brand">Дмитрий Долганин</span>
+      <button class="menu-close" type="button" data-menu-close data-i18n="close">Закрыть</button>
+    </div>
+    <nav class="menu-nav" aria-label="Sections">
+      <button type="button" data-nav="projects"><span class="menu-num">01</span><span data-i18n="navProjects">Проекты</span></button>
+      <button type="button" data-nav="gallery"><span class="menu-num">02</span><span data-i18n="navGallery">Галерея</span></button>
+      <button type="button" data-nav="list"><span class="menu-num">03</span><span data-i18n="navList">Список</span></button>
+      <button type="button" data-nav="cv"><span class="menu-num">04</span><span data-i18n="navCv">Резюме</span></button>
+    </nav>
+    <div class="menu-overlay-foot">
+      <a href="mailto:whali.squossh@gmail.com">whali.squossh@gmail.com</a>
+      <div class="menu-social">
+        <a href="https://t.me/whali_squossh" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://www.instagram.com/whali_squossh" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.artstation.com/whali_squossh" target="_blank" rel="noopener noreferrer">ArtStation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Side panel (desktop) ===== -->
+<aside class="side" aria-label="Portfolio navigation">
+  <div class="side-head">
+    <div class="side-head-row">
+      <button class="brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий Долганин</button>
+      <div class="lang-switch" aria-label="Language">
+        <button type="button" class="active" data-lang="ru">ru</button>
+        <button type="button" data-lang="en">en</button>
+        <button type="button" data-lang="zh">中文</button>
+      </div>
+    </div>
+    <span class="side-copy">© 2026</span>
+  </div>
+
+  <nav class="side-nav" aria-label="Sections">
+    <div class="nav-row">
+      <button class="nav-btn active" type="button" data-nav="projects"><span class="nav-label" data-i18n="navProjects">Проекты</span><span class="nav-count" data-nav-count>08</span></button>
+      <button class="nav-mini" type="button" data-nav="list"><span data-i18n="navList">Список</span></button>
+    </div>
+    <button class="nav-btn" type="button" data-nav="gallery"><span class="nav-label" data-i18n="navGallery">Галерея</span></button>
+    <button class="nav-btn" type="button" data-nav="cv"><span class="nav-label" data-i18n="navCv">Резюме</span></button>
+  </nav>
+
+  <div class="side-contacts">
+    <span class="side-contacts-label" data-i18n="contacts">Контакты</span>
+    <a href="mailto:whali.squossh@gmail.com">Email</a>
+    <a href="https://t.me/whali_squossh" target="_blank" rel="noopener noreferrer">Telegram</a>
+    <a href="https://www.instagram.com/whali_squossh" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.artstation.com/whali_squossh" target="_blank" rel="noopener noreferrer">ArtStation</a>
+  </div>
+</aside>
+
+<!-- ===== Main views ===== -->
+<div class="cursor-label" data-cursor-label hidden aria-hidden="true"></div>
+<main class="main" data-main>
+
+  <!-- Projects overview (grid) -->
+  <section class="view view-projects active" data-view="projects" aria-label="Projects">
+    <div class="projects-grid" data-projects-grid></div>
+  </section>
+
+  <!-- Gallery — glass panes like unveil.fr/projects -->
+  <section class="view view-gallery" data-view="gallery" aria-label="Gallery">
+    <div class="gallery-stage" data-gallery-stage></div>
+    <p class="gallery-hint" data-i18n="galleryHint">Скролльте, чтобы листать</p>
+  </section>
+
+  <!-- CV -->
+  <section class="view view-cv" data-view="cv" aria-label="CV">
+    <div class="cv-grid">
+      <p class="about-eyebrow" data-i18n="navCv">Резюме</p>
+      <div class="cv-body">
+        <div class="cv-head">
+          <h1 class="cv-name" data-i18n="brand">Дмитрий Долганин</h1>
+          <p class="cv-role" data-i18n="cvRole"></p>
+          <p class="cv-loc" data-i18n="cvLocation"></p>
+          <div class="cv-downloads">
+            <a class="cv-dl" href="./cv/dolganin-cv-ru.pdf" download="Дмитрий Долганин — CV.pdf" data-i18n="cvDownloadRu">Скачать PDF (ru)</a>
+            <a class="cv-dl" href="./cv/dolganin-cv-en.pdf" download="Dmitrii Dolganin — CV.pdf" data-i18n="cvDownloadEn">Скачать PDF (en)</a>
+          </div>
+        </div>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvProfile">Профиль</h2>
+          <p data-i18n="cvProfileText"></p>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvTasks">Задачи</h2>
+          <ul class="cv-list" data-cv-tasks></ul>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvExperience">Опыт</h2>
+          <div data-cv-experience></div>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvPersonal">Личные проекты</h2>
+          <ul class="cv-list" data-cv-personal></ul>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvSkills">Навыки</h2>
+          <ul class="cv-list" data-cv-skills></ul>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvEducation">Образование</h2>
+          <p data-i18n="cvEducationText"></p>
+        </section>
+
+        <section class="cv-section">
+          <h2 data-i18n="cvEnglish">Английский</h2>
+          <p data-i18n="cvEnglishText"></p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== List overlay (opens ON TOP of Projects, blurred) ===== -->
+<div class="list-overlay" data-list-overlay hidden>
+  <button class="list-close" type="button" data-list-close data-i18n="close">Закрыть</button>
+  <div class="list-inner">
+    <div class="list-table" role="table" aria-label="Projects list">
+      <div class="index-row index-head" role="row">
+        <span role="columnheader" data-i18n="colYear">Год</span>
+        <span role="columnheader" data-i18n="colProject">Проект</span>
+        <span role="columnheader" data-i18n="colCategory">Категория</span>
+      </div>
+      <div data-index-rows></div>
+    </div>
+    <figure class="list-preview" data-list-preview aria-hidden="true">
+      <img src="./assets/ph-01.svg" alt="" data-list-preview-img>
+      <figcaption class="list-preview-cap" data-list-preview-cap></figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- ===== Project detail (unveil-style) ===== -->
+<section class="detail" data-detail hidden aria-label="Project">
+  <button class="detail-close" type="button" data-detail-close data-i18n="close">Закрыть</button>
+
+  <figure class="detail-hero">
+    <img src="./assets/ph-01.svg" alt="" data-detail-hero>
+  </figure>
+
+  <div class="detail-head">
+    <p class="detail-kicker"><span data-detail-year>2026</span> — <span data-detail-category>Категория</span></p>
+    <h1 class="detail-title" data-detail-title>Название проекта</h1>
+    <p class="detail-desc" data-detail-desc></p>
+  </div>
+
+  <div class="detail-credits" data-detail-credits></div>
+
+  <div class="detail-gallery" data-detail-gallery></div>
+
+  <div class="detail-foot">
+    <button class="detail-prev" type="button" data-detail-prev><span data-i18n="prev">Назад</span> ←</button>
+    <button class="detail-next" type="button" data-detail-next>
+      <span class="detail-next-label" data-i18n="nextProject">Следующий проект</span>
+      <span class="detail-next-title" data-detail-next-title></span>
+    </button>
+  </div>
+</section>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
