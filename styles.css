@@ -1,15 +1,13 @@
-
-
 :root{
-  /* primitives */
+
   --p-paper: oklch(0.972 0.004 85);
   --p-paper-2: oklch(0.950 0.006 85);
   --p-ink: oklch(0.24 0.012 70);
   --p-ink-2: oklch(0.48 0.012 70);
-  --p-ink-3: oklch(0.66 0.010 70);   /* блеклый — для акцентных заголовков */
+  --p-ink-3: oklch(0.66 0.010 70);
   --p-line: oklch(0.86 0.008 80);
   --p-accent: oklch(0.56 0.19 32);
-  /* semantics */
+
   --surface: var(--p-paper);
   --surface-2: var(--p-paper-2);
   --text: var(--p-ink);
@@ -17,7 +15,7 @@
   --text-3: var(--p-ink-3);
   --line: var(--p-line);
   --accent: var(--p-accent);
-  /* layout tokens */
+
   --side-w: 340px;
   --pad: 24px;
   --font-sans: "PP Neue Montreal Mono", "Noto Sans SC", monospace;
@@ -27,7 +25,7 @@
 *{ box-sizing:border-box; margin:0; padding:0 }
 html{ scroll-behavior:smooth }
 body{
-  font:300 16px/1.6 var(--font-sans);
+  font:400 16px/1.6 var(--font-sans);
   color:var(--text);
   background:var(--surface);
   -webkit-font-smoothing:antialiased;
@@ -39,7 +37,6 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 :focus-visible{ outline:2px solid var(--accent); outline-offset:2px }
 sup{ font-size:0.45em; letter-spacing:0 }
 
-/* второстепенный (моно) шрифт — самый тонкий */
 .mono, .side-copy, .nav-count, .nav-mini, .detail-kicker,
 .index-head, .index-row, .about-date, .detail-credits,
 .project-card-meta, .gallery-hint, .cv-loc, .cv-dl,
@@ -47,13 +44,12 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .topbar-menu-btn, .menu-close, .menu-num,
 .list-preview-cap, .side-contacts-label{
   font-family:var(--font-mono);
-  font-weight:300;
+  font-weight:400;
 }
 
-/* ================= Language switch ================= */
 .lang-switch{
   display:flex; gap:10px; align-items:baseline;
-  font-family:var(--font-mono); font-weight:300; font-size:12px;
+  font-family:var(--font-mono); font-weight:400; font-size:12px;
 }
 .lang-switch button{
   padding:6px 2px; min-height:32px;
@@ -64,7 +60,6 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .lang-switch button:hover{ color:var(--text) }
 .lang-switch button.active{ color:var(--accent); border-bottom-color:var(--accent) }
 
-/* ================= Side panel (desktop menu) ================= */
 .side{
   position:fixed; inset:0 auto 0 0;
   width:var(--side-w); height:100dvh;
@@ -100,7 +95,7 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .nav-btn{
   display:flex; align-items:baseline; gap:8px;
   padding:6px 0;
-  font-size:26px; font-weight:300; letter-spacing:-0.02em; line-height:1.25;
+  font-size:26px; font-weight:400; letter-spacing:-0.02em; line-height:1.25;
   color:var(--text-2);
   transition:color .2s ease-out, transform .2s ease-out;
 }
@@ -108,7 +103,6 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .nav-btn.active{ color:var(--accent) }
 .nav-count{ font-size:11px; color:var(--text-3) }
 
-/* «Списком» — маленькая вкладка в одной строке с «Проекты» */
 .nav-mini{
   padding:6px 0; min-height:44px;
   font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
@@ -142,7 +136,6 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .side-contacts a:hover{ color:var(--accent) }
 .side-contacts a:hover::after{ transform:scaleX(1) }
 
-/* ================= Mobile top bar + menu overlay ================= */
 .topbar{
   display:none;
   position:fixed; inset:0 0 auto 0; z-index:20;
@@ -183,7 +176,7 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .menu-nav{ display:flex; flex-direction:column; gap:8px; padding-top:16px }
 .menu-nav button{
   display:flex; align-items:baseline; gap:16px;
-  font-size:clamp(36px, 9.5vw, 56px); font-weight:300; letter-spacing:-0.03em;
+  font-size:clamp(36px, 9.5vw, 56px); font-weight:400; letter-spacing:-0.03em;
   line-height:1.15; padding:8px 0; min-height:56px;
   transition:color .2s ease-out;
 }
@@ -197,12 +190,10 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .menu-social{ display:flex; flex-wrap:wrap; gap:8px 20px; color:var(--text-2) }
 .menu-social a{ padding:8px 0; min-height:44px }
 
-/* ================= Main views ================= */
 .main{ margin-left:var(--side-w) }
 .view{ display:none; min-height:100dvh }
 .view.active{ display:block }
 
-/* --- Projects overview --- */
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -225,52 +216,12 @@ sup{ font-size:0.45em; letter-spacing:0 }
   background:linear-gradient(to top, oklch(0.2 0.01 60 / 0.55), transparent);
   transition:opacity .25s ease-out;
 }
-.project-card-title{ font-size:20px; font-weight:300; letter-spacing:-0.02em }
+.project-card-title{ font-size:20px; font-weight:400; letter-spacing:-0.02em }
 .project-card-meta{
   font-size:11px;
   text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap;
 }
 
-/* ================= Gallery — glass panes ================= */
-.view-gallery{ position:relative; height:100dvh; overflow:hidden }
-.gallery-stage{
-  position:absolute; inset:0; overflow:hidden;
-  background:
-    radial-gradient(120% 90% at 70% 20%, var(--surface-2), transparent 60%),
-    var(--surface);
-  touch-action:pan-y;
-}
-.gallery-canvas{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  display:block;
-}
-/* фолбэк без WebGL — простой постер первого проекта */
-.gallery-stage.no-webgl{
-  background:
-    linear-gradient(oklch(1 0 0 / 0.35), oklch(1 0 0 / 0.35)),
-    url("./assets/ph-01.svg") center / min(46%, 520px) no-repeat,
-    radial-gradient(120% 90% at 70% 20%, var(--surface-2), transparent 60%),
-    var(--surface);
-}
-/* название проекта у курсора — чистый машинописный текст */
-.cursor-label{
-  position:fixed; z-index:45; pointer-events:none;
-  padding:2px 0;
-  font-family:var(--font-mono); font-weight:300; font-size:12px;
-  text-transform:uppercase; letter-spacing:0.06em;
-  /* инвертируется относительно фона: читается и на белом, и на тёмной плитке */
-  color:#fff;
-  mix-blend-mode:difference;
-}
-
-.gallery-hint{
-  position:absolute; left:var(--pad); bottom:var(--pad); z-index:2;
-  font-size:11px; text-transform:uppercase; letter-spacing:0.08em;
-  color:var(--text-3);
-}
-
-/* ================= List overlay («Списком» поверх «Проектов») ================= */
 .list-overlay{
   position:fixed; inset:0 0 0 var(--side-w); z-index:25;
   background:color-mix(in oklch, var(--surface) 62%, transparent);
@@ -281,7 +232,7 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .list-overlay[hidden]{ display:none }
 .list-close{
   position:fixed; top:16px; right:var(--pad); z-index:27;
-  font-family:var(--font-mono); font-weight:300; font-size:13px;
+  font-family:var(--font-mono); font-weight:400; font-size:13px;
   text-transform:uppercase; letter-spacing:0.08em;
   padding:12px 16px; min-height:44px;
   background:color-mix(in oklch, var(--surface) 70%, transparent);
@@ -338,22 +289,21 @@ sup{ font-size:0.45em; letter-spacing:0 }
   text-transform:uppercase; letter-spacing:0.08em; color:var(--text-2);
 }
 
-/* ================= CV view ================= */
 .cv-grid{
   display:grid; grid-template-columns:120px 1fr; gap:32px;
   padding:calc(var(--pad)*2) var(--pad);
   max-width:1100px;
 }
 .about-eyebrow{
-  font-family:var(--font-mono); font-weight:300; font-size:10px;
+  font-family:var(--font-mono); font-weight:400; font-size:10px;
   text-transform:uppercase; letter-spacing:0.08em; color:var(--text-3);
 }
 .cv-head{ margin-bottom:56px }
 .cv-name{
-  font-size:clamp(40px, 5vw, 72px); font-weight:300;
+  font-size:clamp(40px, 5vw, 72px); font-weight:400;
   letter-spacing:-0.03em; line-height:1.05; margin-bottom:12px;
 }
-.cv-role{ font-size:18px; font-weight:300; color:var(--text-2); margin-bottom:4px }
+.cv-role{ font-size:18px; font-weight:400; color:var(--text-2); margin-bottom:4px }
 .cv-loc{
   font-size:12px; color:var(--text-3);
   margin-bottom:24px;
@@ -372,7 +322,7 @@ sup{ font-size:0.45em; letter-spacing:0 }
   display:grid; grid-template-columns:200px 1fr; gap:24px;
 }
 .cv-section h2{
-  font-family:var(--font-mono); font-size:10px; font-weight:300;
+  font-family:var(--font-mono); font-size:10px; font-weight:400;
   text-transform:uppercase; letter-spacing:0.08em; color:var(--text-3);
 }
 .cv-section p{ font-size:15px; line-height:1.65; max-width:65ch }
@@ -387,7 +337,6 @@ sup{ font-size:0.45em; letter-spacing:0 }
 .about-item + .about-item{ border-top:1px solid var(--line) }
 .about-date{ font-size:11px; color:var(--text-3); margin-top:4px }
 
-/* ================= Project detail ================= */
 .detail{
   position:fixed; inset:0; z-index:35;
   background:var(--surface);
@@ -417,7 +366,7 @@ sup{ font-size:0.45em; letter-spacing:0 }
   color:var(--text-3); margin-bottom:16px;
 }
 .detail-title{
-  font-size:clamp(44px, 7vw, 104px); font-weight:300;
+  font-size:clamp(44px, 7vw, 104px); font-weight:400;
   letter-spacing:-0.03em; line-height:1.02; text-wrap:balance;
   margin-bottom:24px;
 }
@@ -437,22 +386,14 @@ sup{ font-size:0.45em; letter-spacing:0 }
   text-transform:uppercase; letter-spacing:0.08em; font-size:10px;
   color:var(--text-3); margin-bottom:6px;
 }
-.credit dd{ font-size:14px; font-family:var(--font-sans); font-weight:300 }
+.credit dd{ font-size:14px; font-family:var(--font-sans); font-weight:400 }
 
-.detail-gallery{
-  position:relative;
-  padding:0;
-}
-/* кадры расставляет JS (layoutCollage): плотная кладка без сетки */
-.detail-gallery figure{ position:absolute; margin:0; }
-.detail-gallery figure:not(.detail-video){ cursor:zoom-in; }
-/* кадры — в исходных пропорциях, без обрезки и полей;
-   узкие белые промежутки работают границами между кадрами */
-.detail-gallery img{
-  display:block; width:100%; height:auto;
-}
+.detail-gallery{ padding:0 }
+.detail-gallery figure{ width:100%; margin:0 }
+.detail-gallery figure + figure{ margin-top:2px }
+.detail-gallery figure:not(.detail-video){ cursor:zoom-in }
+.detail-gallery img{ display:block; width:100%; height:auto }
 
-/* лайтбокс: кадр на весь экран, клик куда угодно — закрыть */
 .lightbox{
   position:fixed; inset:0; z-index:400;
   display:grid; place-items:center;
@@ -469,8 +410,17 @@ sup{ font-size:0.45em; letter-spacing:0 }
   width:auto; height:auto;
   box-shadow:0 24px 90px oklch(0 0 0 / 0.2);
 }
+.lightbox-arrow{
+  position:fixed; top:50%; transform:translateY(-50%); z-index:401;
+  font-family:var(--font-mono); font-size:30px; font-weight:400;
+  color:#fff; mix-blend-mode:difference;
+  padding:18px 14px; user-select:none;
+  transition:opacity .2s ease-out;
+}
+.lightbox-arrow:hover{ opacity:0.55 }
+.lightbox-arrow.prev{ left:14px }
+.lightbox-arrow.next{ right:14px }
 
-/* видео внутри галереи проекта — шире остальных кадров */
 .detail-video{ position:relative; }
 .detail-video video{ display:block; width:100%; height:auto; background:#111; }
 .video-controls{
@@ -509,13 +459,12 @@ sup{ font-size:0.45em; letter-spacing:0 }
   margin-bottom:4px;
 }
 .detail-next-title{
-  display:block; font-size:clamp(28px, 4vw, 56px); font-weight:300;
+  display:block; font-size:clamp(28px, 4vw, 56px); font-weight:400;
   letter-spacing:-0.03em; line-height:1.1;
   transition:color .2s ease-out;
 }
 .detail-next:hover .detail-next-title{ color:var(--accent) }
 
-/* ================= Responsive ================= */
 @media (max-width: 1100px){
   .projects-grid{ grid-template-columns:1fr }
 }
@@ -538,9 +487,6 @@ sup{ font-size:0.45em; letter-spacing:0 }
   .cv-grid{ grid-template-columns:1fr; gap:16px; padding:32px var(--pad) }
   .cv-section{ grid-template-columns:1fr; gap:12px; padding:20px 0 }
 
-  .view-gallery{ height:calc(100dvh - 61px) }
-  .gallery-hint{ bottom:16px }
-
   .detail-hero img{ height:56vw; min-height:260px }
   .detail-head{ padding:32px var(--pad) 24px }
   .detail-foot{ flex-direction:column; align-items:flex-start; gap:16px }
@@ -554,5 +500,4 @@ sup{ font-size:0.45em; letter-spacing:0 }
 
 @media (prefers-reduced-motion: reduce){
   *{ animation:none !important; transition:none !important; scroll-behavior:auto }
-  .gallery-track{ transition:none }
 }

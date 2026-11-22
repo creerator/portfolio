@@ -1,25 +1,21 @@
-import * as THREE from "three";
-
-
 const I18N = {
   ru: {
-    brand: "Дмитрий контур",
+    brand: "Дмитрий Долганин",
     menu: "Меню",
     close: "Закрыть",
     navProjects: "Проекты",
-    navGallery: "Галерея",
     navList: "Список",
     navCv: "Резюме",
     contacts: "Контакты",
-    galleryHint: "Скролльте, чтобы листать",
     colYear: "Год",
     colProject: "Проект",
     colCategory: "Категория",
     colClient: "Клиент",
     cvRole: "3D-художник — Hard Surface & визуализация",
-    cvLocation: "Санкт-Петербург, удалённо",
+    cvLocation: "Санкт-Петербург — Москва",
     cvDownloadRu: "Скачать PDF (ru)",
     cvDownloadEn: "Скачать PDF (en)",
+    cvDownloadZh: "Скачать PDF (zh)",
     cvProfile: "Профиль",
     cvProfileText:
       "3D-художник, с 2022 года выполняю фриланс-проекты: hard surface, автомобили, архитектурная и предметная визуализация, стилизованные сцены. Беру на себя отдельный этап или проект целиком: моделирование, текстурирование, свет, финальные рендеры.",
@@ -35,10 +31,10 @@ const I18N = {
     cvExperience: "Опыт",
     cvExperienceItems: [
       ["3D-художник / визуализатор — фриланс", "2022 — настоящее время"],
-      ["Жилой дом и МОП — сцена, материалы, свет; серия из 10 рендеров", ""],
-      ["Окружение для VR-игры — 6 стилизованных low-poly комнат", ""],
-      ["Заброшенная лаборатория — визуальное повествование, 10 рендеров за неделю", ""],
-      ["Парк аттракционов — стилизованное окружение, 4 финальных рендера", ""],
+      ["Парк аттракционов — стилизованное окружение, 4 финальных рендера", "2023"],
+      ["Окружение для VR-игры — 6 стилизованных low-poly комнат", "2024"],
+      ["Заброшенная лаборатория — визуальное повествование, 10 рендеров за неделю", "2024"],
+      ["Жилой дом и МОП — сцена, материалы, свет; серия из 10 рендеров", "2025"],
     ],
     cvPersonal: "Личные проекты",
     cvPersonalItems: [
@@ -58,7 +54,7 @@ const I18N = {
     ],
     cvEducation: "Образование",
     cvEducationText:
-      "Университет ИТМО, бакалавриат, 4 курс — «Программная инженерия и компьютерные технологии в дизайне», специализация: 3D-моделирование.",
+      "Университет ИТМО, бакалавриат, 2023–2027 — «Программная инженерия и компьютерные технологии в дизайне», специализация: 3D-моделирование.",
     cvEnglish: "Английский",
     cvEnglishText:
       "Свободно читаю технические материалы и документацию. Для работы предпочитаю письменную коммуникацию; разговорный английский активно развиваю.",
@@ -72,23 +68,22 @@ const I18N = {
       "Описание проекта — пара абзацев о задаче, идее и результате. Замените этот текст на свой (файл src/main.js, блок PROJECTS).",
   },
   en: {
-    brand: "Dmitrii circuit",
+    brand: "Dmitrii Dolganin",
     menu: "Menu",
     close: "Close",
     navProjects: "Projects",
-    navGallery: "Gallery",
     navList: "List",
     navCv: "CV",
     contacts: "Contacts",
-    galleryHint: "Scroll to browse",
     colYear: "Year",
     colProject: "Project",
     colCategory: "Category",
     colClient: "Client",
     cvRole: "3D Artist — Hard Surface & Visualization",
-    cvLocation: "Saint Petersburg, remote",
+    cvLocation: "Saint Petersburg — Moscow",
     cvDownloadRu: "Download PDF (ru)",
     cvDownloadEn: "Download PDF (en)",
+    cvDownloadZh: "Download PDF (zh)",
     cvProfile: "Profile",
     cvProfileText:
       "3D artist freelancing since 2022: hard surface, automotive, architectural and product visualization, stylized scenes. I take on a single stage or a whole project: modeling, texturing, lighting, final renders.",
@@ -104,10 +99,10 @@ const I18N = {
     cvExperience: "Experience",
     cvExperienceItems: [
       ["3D artist / visualizer — freelance", "2022 — present"],
-      ["Residential building & common areas — scene, materials, light; 10 renders", ""],
-      ["VR game environment — 6 stylized low-poly rooms", ""],
-      ["Abandoned laboratory — visual storytelling, 10 renders in a week", ""],
-      ["Amusement park — stylized environment, 4 final renders", ""],
+      ["Amusement park — stylized environment, 4 final renders", "2023"],
+      ["VR game environment — 6 stylized low-poly rooms", "2024"],
+      ["Abandoned laboratory — visual storytelling, 10 renders in a week", "2024"],
+      ["Residential building & common areas — scene, materials, light; 10 renders", "2025"],
     ],
     cvPersonal: "Personal projects",
     cvPersonalItems: [
@@ -127,7 +122,7 @@ const I18N = {
     ],
     cvEducation: "Education",
     cvEducationText:
-      "ITMO University, BA, 4th year — Software Engineering & Computer Technologies in Design, specialization: 3D modeling.",
+      "ITMO University, BA, 2023–2027 — Software Engineering & Computer Technologies in Design, specialization: 3D modeling.",
     cvEnglish: "English",
     cvEnglishText:
       "Fluent reader of technical docs and tutorials. Prefer written communication for work; actively improving spoken English.",
@@ -141,23 +136,22 @@ const I18N = {
       "Project description — a couple of paragraphs about the brief, the idea and the outcome. Replace this text with your own (src/main.js, PROJECTS block).",
   },
   zh: {
-    brand: "德米特里·电路",
+    brand: "德米特里·多尔加宁",
     menu: "菜单",
     close: "关闭",
     navProjects: "项目",
-    navGallery: "画廊",
     navList: "列表",
     navCv: "简历",
     contacts: "联系方式",
-    galleryHint: "滚动浏览",
     colYear: "年份",
     colProject: "项目",
     colCategory: "类别",
     colClient: "客户",
     cvRole: "3D艺术家 — 硬表面与可视化",
-    cvLocation: "圣彼得堡，远程",
+    cvLocation: "圣彼得堡 — 莫斯科",
     cvDownloadRu: "下载 PDF (ru)",
     cvDownloadEn: "下载 PDF (en)",
+    cvDownloadZh: "下载 PDF (zh)",
     cvProfile: "简介",
     cvProfileText:
       "自2022年起从事自由职业的3D艺术家：硬表面、汽车、建筑与产品可视化、风格化场景。可承担单个环节或完整项目：建模、贴图、灯光、最终渲染。",
@@ -173,10 +167,10 @@ const I18N = {
     cvExperience: "经历",
     cvExperienceItems: [
       ["3D艺术家 / 可视化 — 自由职业", "2022 — 至今"],
-      ["住宅楼与公共区域 — 场景、材质、灯光；10张渲染图", ""],
-      ["VR游戏环境 — 6间风格化低多边形房间", ""],
-      ["废弃实验室 — 视觉叙事，一周10张渲染", ""],
-      ["游乐园 — 风格化环境，4张最终渲染", ""],
+      ["游乐园 — 风格化环境，4张最终渲染", "2023"],
+      ["VR游戏环境 — 6间风格化低多边形房间", "2024"],
+      ["废弃实验室 — 视觉叙事，一周10张渲染", "2024"],
+      ["住宅楼与公共区域 — 场景、材质、灯光；10张渲染图", "2025"],
     ],
     cvPersonal: "个人项目",
     cvPersonalItems: [
@@ -196,7 +190,7 @@ const I18N = {
     ],
     cvEducation: "教育",
     cvEducationText:
-      "圣彼得堡国立信息技术大学（ITMO），本科四年级 — 设计中的软件工程与计算机技术，方向：3D建模。",
+      "圣彼得堡国立信息技术大学（ITMO），本科 2023–2027 — 设计中的软件工程与计算机技术，方向：3D建模。",
     cvEnglish: "英语",
     cvEnglishText: "可流畅阅读技术文档与教程。工作沟通以书面为主，口语持续提升中。",
     prev: "上一个",
@@ -210,8 +204,6 @@ const I18N = {
   },
 };
 
-// ---------- Проекты ----------
-// Картинки кладите в app/public/assets/ и меняйте пути в полях image / gallery.
 const T = (ru, en, zh) => ({ ru, en, zh });
 const PERSONAL = T("Личный проект", "Personal project", "个人项目");
 const CLIENT = T("Название клиента", "Client Name", "客户名称");
@@ -651,7 +643,6 @@ const PROJECTS = [
   },
 ];
 
-// ---------- Движок ----------
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
@@ -669,6 +660,7 @@ let currentProject = 0;
 let detailOpen = false;
 let listOpen = false;
 let activeView = "projects";
+let suppressHist = false;
 
 const t = (key) => I18N[lang][key] ?? key;
 const L = (obj) => (typeof obj === "object" && obj !== null ? obj[lang] ?? obj.ru : obj);
@@ -689,6 +681,21 @@ function fillList(rootSel, items, withDate) {
   });
 }
 
+function histState() {
+  return {
+    view: activeView,
+    list: listOpen,
+    detail: detailOpen ? currentProject : -1,
+    lb: lightbox && lightbox.classList.contains("open") ? lbIndex : -1,
+  };
+}
+function pushHist() {
+  if (!suppressHist) history.pushState(histState(), "");
+}
+function replaceHist() {
+  history.replaceState(histState(), "");
+}
+
 function applyLang() {
   document.documentElement.lang = lang;
   document.title = `${t("brand")} — ${t("cvRole").split("—")[0].trim()}`;
@@ -704,8 +711,6 @@ function applyLang() {
 
   renderGrid();
   renderList();
-  renderGallery();
-  // счётчик проектов в меню — всегда актуальный
   $("[data-nav-count]").textContent = String(PROJECTS.length).padStart(2, "0");
   if (detailOpen) renderDetail(currentProject);
 }
@@ -718,38 +723,28 @@ $$("[data-lang]").forEach((btn) =>
   })
 );
 
-/* ---------- Views ---------- */
 function setView(name) {
   if (name === "list") {
-    // «Список» открывается поверх «Проектов»
     openList();
     return;
   }
   closeList();
   activeView = name;
-  // уходим из галереи — прячем подпись у курсора и сбрасываем наведение
-  if (name !== "gallery" && cursorLabel) {
-    cursorLabel.hidden = true;
-    gHover = null;
-  }
   views.forEach((v) => v.classList.toggle("active", v.dataset.view === name));
   navBtns.forEach((b) => b.classList.toggle("active", b.dataset.nav === name));
   closeMenu();
   window.scrollTo(0, 0);
-  if (name === "gallery") {
-    initGallery();
-    requestAnimationFrame(resizeGallery);
-  }
 }
 
 $$("[data-nav]").forEach((btn) =>
   btn.addEventListener("click", () => {
+    closeLightboxUI();
     if (detailOpen) closeDetail();
     setView(btn.dataset.nav);
+    pushHist();
   })
 );
 
-/* ---------- Mobile menu overlay ---------- */
 function openMenu() {
   menuOverlay.hidden = false;
   document.body.style.overflow = "hidden";
@@ -762,9 +757,8 @@ function closeMenu() {
 }
 $("[data-menu-open]").addEventListener("click", openMenu);
 $("[data-menu-close]").addEventListener("click", closeMenu);
-$("[data-list-close]").addEventListener("click", () => setView("projects"));
+$("[data-list-close]").addEventListener("click", () => history.back());
 
-/* ---------- Projects grid ---------- */
 const grid = $("[data-projects-grid]");
 function renderGrid() {
   grid.innerHTML = "";
@@ -784,7 +778,6 @@ function renderGrid() {
   });
 }
 
-/* ---------- List overlay («Список») ---------- */
 const indexRows = $("[data-index-rows]");
 const listPreview = $("[data-list-preview]");
 const listPreviewImg = $("[data-list-preview-img]");
@@ -820,7 +813,6 @@ function showListPreview(i) {
 }
 
 function openList() {
-  // базовый вид под оверлеем — всегда «Проекты»
   views.forEach((v) => v.classList.toggle("active", v.dataset.view === "projects"));
   listOverlay.hidden = false;
   listOpen = true;
@@ -841,332 +833,55 @@ function closeList() {
   document.body.style.overflow = "";
 }
 
-/* ---------- Gallery (Three.js: стеклянные панели в 3D, как unveil.fr) ---------- */
-const galleryStage = $("[data-gallery-stage]");
-const cursorLabel = $("[data-cursor-label]");
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-let gScroll = 0;
-let gTarget = 0;
-let gReady = false;
-let gRenderer, gScene, gCamera;
-let gPanes = [];
-let gHover = null;
-const gPointer = new THREE.Vector2(-10, -10);
-const gRay = new THREE.Raycaster();
-
-// геометрия сцены (в мировых единицах)
-// зазор сильно отрицательный: панели лежат плотной стопкой-веером
-const G = { area: 6.2, thick: 0.07, gap: -2, angle: 0.42 };
-// лента: центр каждой панели вдоль диагонали + полная длина кольца
-let gTotal = 0;
-
-const gMod = (v, m) => ((v % m) + m) % m;
-
-function initGallery() {
-  if (gReady) return;
-  try {
-    gRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  } catch {
-    galleryStage.classList.add("no-webgl");
-    return;
-  }
-  gReady = true;
-
-  gRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  const canvas = gRenderer.domElement;
-  canvas.className = "gallery-canvas";
-  canvas.setAttribute("aria-hidden", "true");
-  galleryStage.prepend(canvas);
-
-  gScene = new THREE.Scene();
-  gCamera = new THREE.PerspectiveCamera(33, 1, 0.1, 100);
-  // взгляд справа сверху: панели видны немного сверху, как пластинки на полке
-  gCamera.position.set(0.5, 2.9, 10.8);
-  gCamera.lookAt(0, -0.6, 0);
-
-  // мягкий свет: грани панелей получают лёгкую объёмную тень
-  gScene.add(new THREE.AmbientLight(0xffffff, 1.15));
-  const dir = new THREE.DirectionalLight(0xffffff, 0.7);
-  dir.position.set(-3, 4, 6);
-  gScene.add(dir);
-
-  const loader = new THREE.TextureLoader();
-  let beltPos = 0;
-
-  PROJECTS.forEach((p, i) => {
-    // панель точно повторяет формат картинки, площадь у всех одинаковая
-    const a = p.aspect || 1.5;
-    let h = Math.sqrt(G.area / a);
-    let w = h * a;
-    if (w > 4.6) { w = 4.6; h = w / a; }
-    if (h > 3.4) { h = 3.4; w = h * a; }
-
-    // торцы — тонированное стекло: средний цвет кадра, глянцевый блик,
-    // чуть прозрачнее лица (у лица opacity 0.94)
-    const edge = new THREE.MeshPhysicalMaterial({
-      color: 0xdfdcd6,
-      roughness: 0.12,
-      metalness: 0,
-      clearcoat: 1,
-      clearcoatRoughness: 0.18,
-      transparent: true,
-      opacity: 0.84,
-    });
-    const tex = loader.load(p.image, (t) => {
-      // средний цвет кадра → окраска торцов
-      const c = document.createElement("canvas");
-      c.width = c.height = 8;
-      const ctx = c.getContext("2d", { willReadFrequently: true });
-      ctx.drawImage(t.image, 0, 0, 8, 8);
-      const d = ctx.getImageData(0, 0, 8, 8).data;
-      let r = 0, g = 0, b = 0;
-      const n = d.length / 4;
-      for (let k = 0; k < d.length; k += 4) { r += d[k]; g += d[k + 1]; b += d[k + 2]; }
-      edge.color.setRGB(r / n / 255, g / n / 255, b / n / 255, THREE.SRGBColorSpace);
-    });
-    tex.colorSpace = THREE.SRGBColorSpace;
-    const face = new THREE.MeshLambertMaterial({
-      map: tex, transparent: true, opacity: 0.94,
-    });
-    const pane = new THREE.Mesh(
-      new THREE.BoxGeometry(w, h, G.thick),
-      [edge, edge, edge, edge, face, edge]
-    );
-    pane.rotation.set(0.06, -0.5, 0);
-    pane.userData = { index: i, pull: 0, belt: beltPos + w / 2 };
-    // шаг ленты; для узких (вертикальных) кадров зазор -2 перевернул бы
-    // порядок — ограничиваем минимальный шаг долей ширины панели
-    beltPos += Math.max(w + G.gap, w * 0.35);
-    gScene.add(pane);
-    gPanes.push(pane);
-  });
-  gTotal = beltPos;
-
-  resizeGallery();
-  requestAnimationFrame(gLoop);
-}
-
-function resizeGallery() {
-  if (!gReady) return;
-  const w = galleryStage.clientWidth;
-  const h = galleryStage.clientHeight;
-  gRenderer.setSize(w, h, false);
-  gCamera.aspect = w / h;
-  // на узких экранах отодвигаем камеру, чтобы панели помещались
-  const narrow = gCamera.aspect < 0.85;
-  gCamera.position.set(0.5, narrow ? 3.4 : 2.9, narrow ? 14.5 : 10.8);
-  gCamera.lookAt(0, -0.6, 0);
-  gCamera.updateProjectionMatrix();
-}
-
-function gLoop() {
-  requestAnimationFrame(gLoop);
-  if (activeView !== "gallery" || !gReady) return;
-
-  // плавный, замедленный скролл: движение к цели с инерцией
-  gScroll += (gTarget - gScroll) * (reducedMotion ? 1 : 0.085);
-
-  const total = gTotal;
-  const cosA = Math.cos(G.angle);
-  const sinA = Math.sin(G.angle);
-
-  gPanes.forEach((pane) => {
-    // бесконечная лента: позиция по модулю длины набора, центрированная
-    const px = gMod(pane.userData.belt - gScroll + total / 2, total) - total / 2;
-    pane.userData.px = px;
-    // сначала — позиция «на полке», без выдвижения
-    pane.position.set(px * cosA, px * sinA, -Math.abs(px) * 0.28);
-  });
-
-  // hover определяем по позициям «на полке»:
-  // выдвинутая панель не уходит из-под курсора, подсветка не дрожит
-  gScene.updateMatrixWorld();
-  gRay.setFromCamera(gPointer, gCamera);
-  const hit = gRay.intersectObjects(gPanes)[0];
-  const newHover = hit ? hit.object : null;
-  if (newHover !== gHover) {
-    gHover = newHover;
-    if (gHover) {
-      const p = PROJECTS[gHover.userData.index];
-      cursorLabel.textContent = `${L(p.title)} — ${p.year}`;
-      cursorLabel.hidden = false;
-      // сразу ставим подпись у курсора, даже если мышь неподвижна
-      cursorLabel.style.left = `${Math.min(lastMouse.x + 18, window.innerWidth - cursorLabel.offsetWidth - 12)}px`;
-      cursorLabel.style.top = `${lastMouse.y + 18}px`;
-      galleryStage.style.cursor = "pointer";
-    } else {
-      cursorLabel.hidden = true;
-      galleryStage.style.cursor = "";
-    }
-  }
-
-  // выдвижение наведённой панели: из стопки вверх, вдоль ленты и к зрителю —
-  // но НЕ дальше передней соседки: подъём по z меньше минимального
-  // глубинного шага (≈ 0.2), поэтому передняя плитка чуть перекрывает её
- 
-  // Выдвижение плитки вдоль её собственных локальных осей X и Y
-  gPanes.forEach((pane) => {
-    const pulled = gHover === pane;
-    const k = reducedMotion ? 1 : 0.14;
-
-    pane.userData.pull +=
-      ((pulled ? 1 : 0) - pane.userData.pull) * k;
-
-    const pl = pane.userData.pull;
-
-    if (pl > 0.001) {
-      // Локальная ось X — вправо по плитке
-      const localRight = new THREE.Vector3(1, 0, 0)
-        .applyQuaternion(pane.quaternion);
-
-      // Локальная ось Y — вверх по плитке
-      const localUp = new THREE.Vector3(0, 1, 0)
-        .applyQuaternion(pane.quaternion);
-
-      // Движение только по плоскости плитки
-      pane.position.addScaledVector(localRight, 0.8 * pl);
-      pane.position.addScaledVector(localUp, 0.15 * pl);
-    }
-  });
-
-
-  gRenderer.render(gScene, gCamera);
-}
-
-/* название проекта — рядом с курсором */
-let lastMouse = { x: 0, y: 0 };
-function moveCursorLabel(e) {
-  lastMouse = { x: e.clientX, y: e.clientY };
-  if (cursorLabel.hidden) return;
-  const w = cursorLabel.offsetWidth;
-  cursorLabel.style.left = `${Math.min(e.clientX + 18, window.innerWidth - w - 12)}px`;
-  cursorLabel.style.top = `${e.clientY + 18}px`;
-}
-window.addEventListener("mousemove", moveCursorLabel);
-
-galleryStage.addEventListener("pointermove", (e) => {
-  const r = galleryStage.getBoundingClientRect();
-  gPointer.x = ((e.clientX - r.left) / r.width) * 2 - 1;
-  gPointer.y = -((e.clientY - r.top) / r.height) * 2 + 1;
-});
-galleryStage.addEventListener("pointerleave", () => {
-  gPointer.set(-10, -10);
-});
-galleryStage.addEventListener("click", () => {
-  if (gHover) openDetail(gHover.userData.index);
-});
-
-galleryStage.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault();
-    const unit = e.deltaMode === 1 ? 33 : 1;
-    gTarget += (e.deltaY + e.deltaX) * unit * 0.0016;
-  },
-  { passive: false }
-);
-
-let touchX = null;
-galleryStage.addEventListener("touchstart", (e) => {
-  touchX = e.touches[0].clientX;
-});
-galleryStage.addEventListener("touchmove", (e) => {
-  if (touchX === null) return;
-  const dx = touchX - e.touches[0].clientX;
-  touchX = e.touches[0].clientX;
-  gTarget += dx * 0.006;
-});
-
-document.addEventListener("keydown", (e) => {
-  if (activeView !== "gallery" || detailOpen || !menuOverlay.hidden || listOpen) return;
-  if (e.key === "ArrowRight") gTarget += 1.4;
-  else if (e.key === "ArrowLeft") gTarget -= 1.4;
-  else return;
-});
-
-window.addEventListener("resize", () => {
-  if (activeView === "gallery") resizeGallery();
-  if (detailOpen) layoutCollage($("[data-detail-gallery]"), currentProject);
-});
-
-// applyLang() вызывает renderGallery — сцена не зависит от языка, перерисовка не нужна
-function renderGallery() {}
-
-/* ---------- Project detail ---------- */
-// стабильный псевдослучайный хэш → [0, 1): коллаж не «прыгает» при перерендере
-function hash01(n) {
-  const x = Math.sin(n * 127.1 + 311.7) * 43758.5453;
-  return x - Math.floor(x);
-}
-
-/* коллаж-кладка: кадры шириной ~24–31% (на десктопе в ряду помещается
-   минимум три), ряды заходят друг на друга, кадры не касаются.
-   Раскладка детерминирована: у каждого проекта стабильный узор. */
-function layoutCollage(gallery, projIndex) {
-  const figs = [...gallery.children];
-  const W = gallery.clientWidth;
-  if (!W) return;
-  const mobile = W < 720;
-  const gutter = Math.max(8, Math.round(W * (mobile ? 0.03 : 0.015)));
-  const placed = [];
-  figs.forEach((fig, gi) => {
-    const aspect = parseFloat(fig.dataset.aspect) || 1.5;
-    const isVideo = fig.classList.contains("detail-video");
-    let wPct = mobile
-      ? 46 + hash01(projIndex * 991 + gi * 37 + 5) * 10   // 46–56%
-      : 24 + hash01(projIndex * 991 + gi * 37 + 5) * 7;   // 24–31%
-    if (isVideo && !mobile) wPct = 34 + hash01(projIndex * 991 + gi * 37 + 5) * 8;
-    const w = Math.round(W * wPct / 100);
-    const h = Math.round(w / aspect);
-    // x-кандидаты перебираются в детерминированном «случайном» порядке,
-    // y наращивается снизу вверх по шагу — первая свободная позиция
-    const maxX = W - w;
-    const xs = [];
-    const SLOTS = 24;
-    for (let s = 0; s <= SLOTS; s++) xs.push(maxX * s / SLOTS);
-    xs.sort((a, b) =>
-      hash01(projIndex * 733 + gi * 51 + Math.round(a)) -
-      hash01(projIndex * 733 + gi * 51 + Math.round(b))
-    );
-    let rect = null;
-    for (let y = 0; y < 100000; y += gutter) {
-      for (const x of xs) {
-        const cand = { x, y, r: x + w, b: y + h };
-        const hit = placed.some(q =>
-          !(cand.r + gutter <= q.x || q.r + gutter <= cand.x ||
-            cand.b + gutter <= q.y || q.b + gutter <= cand.y)
-        );
-        if (!hit) { rect = cand; break; }
-      }
-      if (rect) break;
-    }
-    placed.push(rect);
-    fig.style.left = Math.round(rect.x) + "px";
-    fig.style.top = Math.round(rect.y) + "px";
-    fig.style.width = w + "px";
-  });
-  const bottom = placed.reduce((m, q) => Math.max(m, q.b), 0);
-  gallery.style.height = Math.round(bottom) + "px";
-}
-
-/* лайтбокс: кадр из коллажа на весь экран, клик куда угодно — закрыть */
 let lightbox = null;
-function openLightbox(src) {
-  if (!lightbox) {
-    lightbox = document.createElement("div");
-    lightbox.className = "lightbox";
-    lightbox.setAttribute("role", "dialog");
-    lightbox.setAttribute("aria-label", "Полноэкранный просмотр");
-    lightbox.innerHTML = "<img alt=''>";
-    lightbox.addEventListener("click", closeLightbox);
-    document.body.appendChild(lightbox);
-  }
-  lightbox.querySelector("img").src = src;
+let lbList = [];
+let lbIndex = 0;
+
+function ensureLightbox() {
+  if (lightbox) return;
+  lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-label", "Полноэкранный просмотр");
+  lightbox.innerHTML =
+    "<img alt=''>" +
+    "<button class='lightbox-arrow prev' type='button' aria-label='Предыдущий кадр'>&lt;</button>" +
+    "<button class='lightbox-arrow next' type='button' aria-label='Следующий кадр'>&gt;</button>";
+  lightbox.addEventListener("click", (e) => {
+    if (e.target.closest(".lightbox-arrow")) return;
+    history.back();
+  });
+  $(".lightbox-arrow.prev", lightbox).addEventListener("click", () => lbStep(-1));
+  $(".lightbox-arrow.next", lightbox).addEventListener("click", () => lbStep(1));
+  document.body.appendChild(lightbox);
+}
+
+function lbStep(d) {
+  if (!lbList.length) return;
+  lbIndex = (lbIndex + d + lbList.length) % lbList.length;
+  lightbox.querySelector("img").src = lbList[lbIndex];
+  replaceHist();
+}
+
+function openLightboxUI(list, idx) {
+  ensureLightbox();
+  lbList = list;
+  lbIndex = idx;
+  lightbox.querySelector("img").src = lbList[lbIndex];
   lightbox.classList.add("open");
 }
-function closeLightbox() {
+function openLightbox(list, idx) {
+  openLightboxUI(list, idx);
+  pushHist();
+}
+function closeLightboxUI() {
   if (lightbox) lightbox.classList.remove("open");
+}
+
+function detailImages(p) {
+  return p.gallery
+    .filter((item) => item.type !== "video" && item.src !== p.image)
+    .map((item) => item.src);
 }
 
 function renderDetail(i) {
@@ -1189,16 +904,12 @@ function renderDetail(i) {
 
   const gallery = $("[data-detail-gallery]");
   gallery.innerHTML = "";
-  // кадры только собираются в DOM с данными о пропорциях —
-  // раскладку (плотная кладка, кадры заходят на «строки» друг друга)
-  // считает layoutCollage после отрисовки
+  const lbImages = detailImages(p);
   p.gallery.forEach((item) => {
-    // главный кадр показан вверху страницы — в коллаже не повторяем
     if (item.type !== "video" && item.src === p.image) return;
     if (item.type === "video") {
       const fig = document.createElement("figure");
       fig.className = "detail-video";
-      fig.dataset.aspect = item.aspect || 1.78;
       fig.innerHTML = `
         <video src="${item.src}" poster="${item.poster}" preload="none" loop playsinline style="aspect-ratio:${item.aspect || 1.78}"></video>
         <div class="video-controls">
@@ -1222,13 +933,10 @@ function renderDetail(i) {
       return;
     }
     const fig = document.createElement("figure");
-    fig.dataset.aspect = item.aspect || 1.5;
     fig.innerHTML = `<img src="${item.src}" alt="" loading="lazy">`;
-    fig.addEventListener("click", () => openLightbox(item.src));
+    fig.addEventListener("click", () => openLightbox(lbImages, lbImages.indexOf(item.src)));
     gallery.appendChild(fig);
   });
-  // раскладка — на следующем кадре, когда оверлей проекта уже виден
-  requestAnimationFrame(() => layoutCollage(gallery, i));
 
   const next = PROJECTS[(i + 1) % PROJECTS.length];
   $("[data-detail-next-title]").textContent = L(next.title);
@@ -1236,16 +944,12 @@ function renderDetail(i) {
 
 function openDetail(i) {
   renderDetail(i);
-  // пока открыт проект, галерейная подпись у курсора не нужна
-  if (cursorLabel) {
-    cursorLabel.hidden = true;
-    gHover = null;
-  }
   detail.hidden = false;
   detailOpen = true;
   document.body.style.overflow = "hidden";
   detail.scrollTop = 0;
   $("[data-detail-close]").focus();
+  pushHist();
 }
 
 function closeDetail() {
@@ -1255,24 +959,75 @@ function closeDetail() {
   document.body.style.overflow = listOpen || !menuOverlay.hidden ? "hidden" : "";
 }
 
-$("[data-detail-close]").addEventListener("click", closeDetail);
+$("[data-detail-close]").addEventListener("click", () => history.back());
 $("[data-detail-prev]").addEventListener("click", () => {
   renderDetail((currentProject - 1 + PROJECTS.length) % PROJECTS.length);
   detail.scrollTop = 0;
+  replaceHist();
 });
 $("[data-detail-next]").addEventListener("click", () => {
   renderDetail((currentProject + 1) % PROJECTS.length);
   detail.scrollTop = 0;
+  replaceHist();
 });
 
-/* ---------- Global keys ---------- */
+function applyState(s) {
+  suppressHist = true;
+  closeMenu();
+  if (typeof s.detail === "number" && s.detail >= 0) {
+    if (!detailOpen || currentProject !== s.detail) {
+      renderDetail(s.detail);
+      detail.hidden = false;
+      detailOpen = true;
+      document.body.style.overflow = "hidden";
+      detail.scrollTop = 0;
+    }
+    const imgs = detailImages(PROJECTS[s.detail]);
+    if (typeof s.lb === "number" && s.lb >= 0 && imgs.length) {
+      openLightboxUI(imgs, Math.min(s.lb, imgs.length - 1));
+    } else {
+      closeLightboxUI();
+    }
+  } else {
+    closeLightboxUI();
+    if (detailOpen) closeDetail();
+  }
+  if (s.list) {
+    if (!listOpen) openList();
+  } else if (listOpen) {
+    closeList();
+  }
+  const targetView = s.list ? "projects" : s.view || "projects";
+  if (targetView !== activeView) {
+    activeView = targetView;
+    views.forEach((v) => v.classList.toggle("active", v.dataset.view === targetView));
+    navBtns.forEach((b) => b.classList.toggle("active", b.dataset.nav === targetView));
+  }
+  if (s.list) {
+    navBtns.forEach((b) => {
+      const isList = b.dataset.nav === "list";
+      const isProjects = b.dataset.nav === "projects";
+      b.classList.toggle("active", isList || isProjects);
+    });
+  }
+  suppressHist = false;
+}
+
+window.addEventListener("popstate", (e) => {
+  applyState(e.state || { view: "projects", list: false, detail: -1, lb: -1 });
+});
+
 document.addEventListener("keydown", (e) => {
+  if (lightbox && lightbox.classList.contains("open")) {
+    if (e.key === "ArrowRight") { lbStep(1); return; }
+    if (e.key === "ArrowLeft") { lbStep(-1); return; }
+    if (e.key === "Escape") { history.back(); return; }
+  }
   if (e.key !== "Escape") return;
-  if (lightbox && lightbox.classList.contains("open")) closeLightbox();
-  else if (detailOpen) closeDetail();
+  if (detailOpen) history.back();
   else if (!menuOverlay.hidden) closeMenu();
-  else if (listOpen) setView("projects");
+  else if (listOpen) history.back();
 });
 
-/* ---------- Init ---------- */
 applyLang();
+history.replaceState(histState(), "");

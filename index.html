@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Дмитрий контур — 3D-художник</title>
-<meta name="description" content="Портфолио Дмитрия контура — 3D-художника: hard surface, автомобили, архитектурная визуализация, стилизованные сцены.">
+<title>Дмитрий Долганин — 3D-художник</title>
+<meta name="description" content="Портфолио Дмитрия Долганина — 3D-художника: hard surface, автомобили, архитектурная визуализация, стилизованные сцены.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -29,10 +29,9 @@
 </head>
 <body>
 
-<!-- ===== Mobile top bar (hidden on desktop) ===== -->
 <header class="topbar">
   <div class="topbar-left">
-    <button class="topbar-brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий контур</button>
+    <button class="topbar-brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий Долганин</button>
     <div class="lang-switch" aria-label="Language">
       <button type="button" class="active" data-lang="ru">ru</button>
       <button type="button" data-lang="en">en</button>
@@ -42,18 +41,16 @@
   <button class="topbar-menu-btn" type="button" data-menu-open aria-haspopup="dialog" data-i18n="menu">Меню</button>
 </header>
 
-<!-- ===== Mobile full-screen menu ===== -->
 <div class="menu-overlay" data-menu-overlay hidden>
   <div class="menu-overlay-inner" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="menu-overlay-head">
-      <span data-i18n="brand">Дмитрий контур</span>
+      <span data-i18n="brand">Дмитрий Долганин</span>
       <button class="menu-close" type="button" data-menu-close data-i18n="close">Закрыть</button>
     </div>
     <nav class="menu-nav" aria-label="Sections">
       <button type="button" data-nav="projects"><span class="menu-num">01</span><span data-i18n="navProjects">Проекты</span></button>
-      <button type="button" data-nav="gallery"><span class="menu-num">02</span><span data-i18n="navGallery">Галерея</span></button>
-      <button type="button" data-nav="list"><span class="menu-num">03</span><span data-i18n="navList">Список</span></button>
-      <button type="button" data-nav="cv"><span class="menu-num">04</span><span data-i18n="navCv">Резюме</span></button>
+      <button type="button" data-nav="list"><span class="menu-num">02</span><span data-i18n="navList">Список</span></button>
+      <button type="button" data-nav="cv"><span class="menu-num">03</span><span data-i18n="navCv">Резюме</span></button>
     </nav>
     <div class="menu-overlay-foot">
       <a href="mailto:whali.squossh@gmail.com">whali.squossh@gmail.com</a>
@@ -66,11 +63,10 @@
   </div>
 </div>
 
-<!-- ===== Side panel (desktop) ===== -->
 <aside class="side" aria-label="Portfolio navigation">
   <div class="side-head">
     <div class="side-head-row">
-      <button class="brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий контур</button>
+      <button class="brand" type="button" data-nav="projects" data-i18n="brand">Дмитрий Долганин</button>
       <div class="lang-switch" aria-label="Language">
         <button type="button" class="active" data-lang="ru">ru</button>
         <button type="button" data-lang="en">en</button>
@@ -85,7 +81,6 @@
       <button class="nav-btn active" type="button" data-nav="projects"><span class="nav-label" data-i18n="navProjects">Проекты</span><span class="nav-count" data-nav-count>08</span></button>
       <button class="nav-mini" type="button" data-nav="list"><span data-i18n="navList">Список</span></button>
     </div>
-    <button class="nav-btn" type="button" data-nav="gallery"><span class="nav-label" data-i18n="navGallery">Галерея</span></button>
     <button class="nav-btn" type="button" data-nav="cv"><span class="nav-label" data-i18n="navCv">Резюме</span></button>
   </nav>
 
@@ -98,33 +93,26 @@
   </div>
 </aside>
 
-<!-- ===== Main views ===== -->
-<div class="cursor-label" data-cursor-label hidden aria-hidden="true"></div>
 <main class="main" data-main>
 
-  <!-- Projects overview (grid) -->
+
   <section class="view view-projects active" data-view="projects" aria-label="Projects">
     <div class="projects-grid" data-projects-grid></div>
   </section>
 
-  <!-- Gallery — glass panes like unveil.fr/projects -->
-  <section class="view view-gallery" data-view="gallery" aria-label="Gallery">
-    <div class="gallery-stage" data-gallery-stage></div>
-    <p class="gallery-hint" data-i18n="galleryHint">Скролльте, чтобы листать</p>
-  </section>
 
-  <!-- CV -->
   <section class="view view-cv" data-view="cv" aria-label="CV">
     <div class="cv-grid">
       <p class="about-eyebrow" data-i18n="navCv">Резюме</p>
       <div class="cv-body">
         <div class="cv-head">
-          <h1 class="cv-name" data-i18n="brand">Дмитрий контур</h1>
+          <h1 class="cv-name" data-i18n="brand">Дмитрий Долганин</h1>
           <p class="cv-role" data-i18n="cvRole"></p>
           <p class="cv-loc" data-i18n="cvLocation"></p>
           <div class="cv-downloads">
-            <a class="cv-dl" href="./cv/circuit-cv-ru.pdf" download="Дмитрий контур — CV.pdf" data-i18n="cvDownloadRu">Скачать PDF (ru)</a>
-            <a class="cv-dl" href="./cv/circuit-cv-en.pdf" download="Dmitrii circuit — CV.pdf" data-i18n="cvDownloadEn">Скачать PDF (en)</a>
+            <a class="cv-dl" href="./cv/dolganin-cv-ru.pdf" download="Дмитрий Долганин — CV.pdf" data-i18n="cvDownloadRu">Скачать PDF (ru)</a>
+            <a class="cv-dl" href="./cv/dolganin-cv-en.pdf" download="Dmitrii Dolganin — CV.pdf" data-i18n="cvDownloadEn">Скачать PDF (en)</a>
+            <a class="cv-dl" href="./cv/dolganin-cv-zh.pdf" download="Dmitrii Dolganin — CV (zh).pdf" data-i18n="cvDownloadZh">Скачать PDF (zh)</a>
           </div>
         </div>
 
@@ -168,7 +156,6 @@
 
 </main>
 
-<!-- ===== List overlay (opens ON TOP of Projects, blurred) ===== -->
 <div class="list-overlay" data-list-overlay hidden>
   <button class="list-close" type="button" data-list-close data-i18n="close">Закрыть</button>
   <div class="list-inner">
@@ -187,7 +174,6 @@
   </div>
 </div>
 
-<!-- ===== Project detail (unveil-style) ===== -->
 <section class="detail" data-detail hidden aria-label="Project">
   <button class="detail-close" type="button" data-detail-close data-i18n="close">Закрыть</button>
 
